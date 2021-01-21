@@ -40,7 +40,12 @@ INSTALLED_APPS = [
     #3rd party apps
     'rest_framework',
     'rest_framework.authtoken',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'rest_auth',
+    'rest_auth.registration',
+
 
     'posts.apps.PostsConfig',
 ]
@@ -134,3 +139,4 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     ]
 }
+
