@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    #3rd party apps
+    'posts.apps.PostsConfig',
     'rest_framework',
     'rest_framework.authtoken',
     'rest_framework_swagger',
@@ -48,8 +48,6 @@ INSTALLED_APPS = [
     'rest_auth',
     'rest_auth.registration',
 
-
-    'posts.apps.PostsConfig',
 ]
 
 MIDDLEWARE = [
@@ -146,3 +144,8 @@ REST_FRAMEWORK = {
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 SITE_ID = 1
+
+SWAGGER_SETTINGS =  {
+    'LOGIN_URL': 'rest_framework:login',
+    'LOGOUT_URL': 'rest_framework:logout',
+}
